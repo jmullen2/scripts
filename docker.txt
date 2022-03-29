@@ -1,0 +1,384 @@
+192.168.1.1  移动光猫 帐号：CMCCAdmin 密码：aDm8H%MdA
+192.168.1.2  OpenWrt 帐号：root 密码：password
+192.168.50.1 OpenWrt 帐号：root 密码：password
+192.168.50.2 CentOS 帐号：root 密码：password
+192.168.50.2:5700 qinglong 帐号：root 密码：password
+192.168.50.2:5701 ark
+192.168.50.2:5702 傻妞
+192.168.50.2:5702/admin 傻妞数据 帐号：admin 密码：password
+192.168.50.2:5703 QQ
+192.168.50.2:5704 阿东
+192.168.50.2:5705 阿东机器人 帐号：admin 密码：password
+192.168.50.3 win7 帐号：Administrator 密码：password
+192.168.50.3:5703 vlw
+192.168.50.5 esxi 帐号：root 密码：无
+
+AX6ssh密码：14da47d1
+AX6ssh权限丢失的话
+telnet 192.168.1.1
+sed -i 's/channel=.*/channel="debug"/g' /etc/init.d/dropbear
+/etc/init.d/dropbear start
+exit
+
+
+机场：
+白月光：https://nhdufi497g.cn88.net/api/v1/client/subscribe?token=854e953355bc0ade1f0cdf5c48bb76ba
+nano：https://subv2.nanoport.xyz/api/v1/client/subscribe?token=7be6b5e73cce47c6e74117d22d65197b
+椰汁：https://kolacloud.com/link/QnklJB94KvCn1oQb?sub=4
+神器：https://v2r.yydsvpn.xyz/api/v1/client/subscribe?token=653f3aa43aa0b4bbd36a0e23d47fa687
+
+tg机器人：
+Your user ID: 1648074905
+Current chat ID: 1648074905
+tg token：1887472615:AAGQy7EbBTa7N9xFpju7uyqujhuWX0pDFHM
+我的tg：
+App api_id:7735714
+App api_hash:2d59068aede19a05e01360cc1b86c4c7
+
+青龙安装：
+docker pull whyour/qinglong:latest
+
+docker run -dit \
+-v $PWD/ql/config:/ql/config \
+-v $PWD/ql/log:/ql/log \
+-v $PWD/ql/db:/ql/db \
+-v $PWD/ql/repo:/ql/repo \
+-v $PWD/ql/raw:/ql/raw \
+-v $PWD/ql/scripts:/ql/scripts \
+-v $PWD/ql/jbot:/ql/jbot \
+-v $PWD/ql/deps:/ql/deps \
+-p 5700:5700 \
+--name qinglong \
+--hostname qinglong \
+--restart always \
+whyour/qinglong:2.10.13
+
+青龙依赖安装：Nodejs：png-js @types/node require typescript crypto-js prettytable dotenv jsdom date-fns tough-cookie tslib ws@7.4.3 ts-md5 jsdom -g jieba fs form-data json5 global-agent @types/node require typescript js-base64 axios
+Python3：requests canvas ping3 jieba
+Linux：bizCode bizMsg lxml
+sudo docker exec -it qinglong bash -c "pnpm install -g png-js"
+
+查看容器：docker ps -a
+删除容器：docker rm -f id
+查看镜像：docker images
+删除镜像：docker rmi id
+容器重启：docker restart qinglong
+进入容器：docker exec -it qinglong bash
+
+Faker仓库拉取：ql repo https://ghproxy.com/https://github.com/shufflewzc/faker2.git "jd_|jx_|gua_|jddj_|getJDCookie" "activity|backUp" "^jd[^_]|USER|function|utils|sendNotify|ZooFaker_Necklace.js|JDJRValidator_|sign_graphics_validate|ql"
+
+Aaron-lv仓库拉取：ql repo https://github.com/Aaron-lv/sync.git "jd_|jx_|getJDCookie" "activity|backUp|Coupon" "^jd[^_]|USER|utils" "jd_scripts"
+
+smiek仓库拉取：ql repo https://github.com/smiek2121/scripts.git "jd_|gua_" "" "ZooFaker_Necklace.js|JDJRValidator_Pure.js|sign_graphics_validate.js|cleancart_activity.js|jdCookie.js|sendNotify.js"
+
+ccwav仓库拉取：ql repo https://github.com/ccwav/QLScript2.git "jd_" "NoUsed" "ql|utils|USER_AGENTS|jdCookie|JS_USER_AGENTS"
+
+star仓库拉取：ql repo https://github.com/star261/jd.git "jd_|star_" "" "code" "main"
+
+JDHelloWorld仓库拉取：ql repo https://github.com/JDHelloWorld/jd_scripts.git "jd_|jx_" "backUp|update" "^jd[^_]|USER|^TS|utils"
+
+passerby-b仓库拉取：ql repo https://github.com/passerby-b/JDDJ.git "jddj_" "scf_test_event|jddj_fruit_code.js|jddj_getck.js|jd_|jddj_cookie" "Cookie|sendNotify"
+
+快手果园仓库拉取：：ql repo https://github.com/passerby-b/ks_fruit.git "ks_" "" "sendNotify"
+
+滴滴果园仓库拉取：ql repo https://github.com/passerby-b/didi_fruit.git "bucketWater|fruit" "getToken" "dd_cookie|sendNotify"
+
+Oreomeow签到任务拉取：ql repo https://github.com/Oreomeow/checkinpanel.git "ck_vqq|ins_" "^checkin" "^notify|^utils|cpm" "master"
+
+美团神券：ql raw https://gitee.com/xiecoll/radish-script/raw/master/MT/lb_meituan.js
+
+饿了么：ql raw https://gitee.com/xiecoll/radish-script/raw/master/ELM/lb_elm.js
+
+爱奇艺：ql raw https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+书旗小说：ql raw http://script.frp.aiuyo.com:8680/sqxs.js
+
+番茄小说：ql raw http://script.frp.aiuyo.com:8680/fqxs.js
+
+番茄畅听：ql raw http://script.frp.aiuyo.com:8680/fqctapp.js
+
+九章头条：ql raw https://raw.githubusercontent.com/bluesmallpig/scripts/main/jztt.js
+
+睡觉宝：ql raw http://script.frp.aiuyo.com:8680/sjb.js
+
+文旅看点：ql raw http://script.frp.aiuyo.com:8680/wlkd.js
+
+淘小说：ql raw http://script.frp.aiuyo.com:8680/txs.js
+
+快看点：ql raw http://script.frp.aiuyo.com:8680/kkd20220301/kkd.js
+
+健康头条：ql raw http://script.frp.aiuyo.com:8680/jktt.js
+
+中青并发：ql raw https://raw.githubusercontent.com/bluesmallpig/scripts/main/zqkd_sync.js
+外置ck模块：ql raw https://raw.githubusercontent.com/bluesmallpig/scripts/main/david_cookies.js
+
+dv快手：
+
+dv快手极速版：
+
+leaf快手：
+
+leaf快手极速版：
+
+抖音火山版：ql raw http://script.frp.aiuyo.com:8680/dyjsb20220326zhuyn/dyhsb.js
+
+鑫广：ql raw https://gitee.com/gossh520/script/raw/master/xgapp.js
+
+返利购：ql raw https://raw.githubusercontent.com/YaphetS0903/JStest/main/flg.js
+
+返利好省：ql raw https://raw.githubusercontent.com/YaphetS0903/JStest/main/flhs.js
+
+聚看点：ql raw http://nm.nm6.ltd/scripts/jkd.js
+
+腾讯自选股：ql raw https://raw.githubusercontent.com/leafxcy/JavaScript/main/txstockV2.js
+
+
+互助码1：顺序我妈妈亮亮小号1小号2
+
+/bean mlrdw3aw26j3w4kufcow7bedsxovk7ounthviay&aogye6x4cnc3pqv42llywho3baeumjmzq26udca&fn5sjpg5zdejmhrgsrw4lspm6agzqxkltmkuihq&6rburfxfpwumvc7rbrazjwhmyu&taga3x25kf7pgotfmesqawuagntrzt72xvmu5dy
+
+/farm a4d0953293394ef5a646fca07f6b4e32&d4e45fab7740438db876f0af6443a6a1&16b2b049910c454292648d967877f768&baf4ec2438b44a8383c244e938a5d3c4&95d646787cf4425b85ec3400d54d92ee
+
+/health T0225KkcRRcc9gWGKUyhwvBeIQCjVfnoaW5kRrbA&T0205KkcJl1QiAKxakyDw7ROCjVfnoaW5kRrbA&T0205KkcPGhQnRy3YkuhwJZoCjVfnoaW5kRrbA&T011-awkAlwY91cCjVfnoaW5kRrbA&T019-akuJmpxsQKSU0GAzqACjVfnoaW5kRrbA
+
+/pet MTEyNDI1MTEyMDAwMDAwMDA0NzcwNTk3Mw==&MTE1MzEzNjI2MDAwMDAwMDU3NjYxNDQ1&MTEzMzI1MTE4NDAwMDAwMDA1ODA5MTM5MQ==&MTEyNzEzMjc0MDAwMDAwMDU4ODcwODA3&MTEzMzI1MTE4NDAwMDAwMDA3OTI4MDYwMw==
+
+/ddfactory T0225KkcRRcc9gWGKUyhwvBeIQCjVWnYaS5kRrbA&T0205KkcJl1QiAKxakyDw7ROCjVWnYaS5kRrbA&T0205KkcPGhQnRy3YkuhwJZoCjVWnYaS5kRrbA&T011-awkAlwY91cCjVWnYaS5kRrbA&T019-akuJmpxsQKSU0GAzqACjVWnYaS5kRrbA
+
+/jxfactory ufjnWYLKgPL70sQTaDIQYw==&Fks1aS6_fddBlXjGNJokEQ==&bolL8LNQOTTk7KmL4EF8Sw==&w8lq2oXx_NDib2M9kzFgWA==&m8kF2f7lJpR7MNFzZU9SiA==
+
+/sgmh T0225KkcRRcc9gWGKUyhwvBeIQCjVQmoaT5kRrbA&T0205KkcJl1QiAKxakyDw7ROCjVQmoaT5kRrbA&T0205KkcPGhQnRy3YkuhwJZoCjVQmoaT5kRrbA&T011-awkAlwY91cCjVQmoaT5kRrbA&T019-akuJmpxsQKSU0GAzqACjVQmoaT5kRrbA
+
+
+互助码2：顺序斌斌小姨贺妍妍
+
+/bean e7lhibzb3zek35lqg5pyr6vkykxbldqvf7w3yey&mlrdw3aw26j3xsfdad4xydbfeu7fttl456jm4tq&4npkonnsy7xi3mi4mz3h3gvlk6bup4eakh2htya
+
+/farm 2cf6458278d94654898731f7ba2b1df6&c1a9f3e21f9e48aead9c2b9b761a232a&5a8806640790432e85c25f47e97ed6a7
+
+/health T0225KkcRBgd9AGDdBOnwPELfACjVfnoaW5kRrbA&T0225KkcRR1K8FCCJBvywKYDdQCjVfnoaW5kRrbA&T0225KkcRxkRpwLVIxrzx_BbJQCjVfnoaW5kRrbA
+
+/pet MTEyNjE4NjQ2MDAwMDAwMDYxNzY0NjU1&MTE1MzEzNjI2MDAwMDAwMDYyODgyNjM1&MTAxODc2NTE0NzAwMDAwMDAwNTY2MzcyMQ==
+
+/factory T0225KkcRBgd9AGDdBOnwPELfACjVWnYaS5kRrbA&T0225KkcRR1K8FCCJBvywKYDdQCjVWnYaS5kRrbA&T0225KkcRxkRpwLVIxrzx_BbJQCjVWnYaS5kRrbA
+
+/jxfactory j3iJrxVg6WOX7SGcXlXZLQ==&2ibAAvNmTx4heTslKzgcnw==&FrIIv5GMdJrpEWVY0v4BNg==
+
+/sgmh T0225KkcRBgd9AGDdBOnwPELfACjVQmoaT5kRrbA&T0225KkcRR1K8FCCJBvywKYDdQCjVQmoaT5kRrbA&T0225KkcRxkRpwLVIxrzx_BbJQCjVQmoaT5kRrbA
+
+
+ark安装：
+先安装git ssh填到git上
+yum -y install git
+ssh-keygen -t rsa -C "327911695@qq.com"
+cat ~/.ssh/id_rsa.pub
+1拉源码
+git clone https://github.com/NNNNolan/Ark.git /ark
+2 拉取基础镜像以后不需要拉取镜像了 如果需要拉取我会通知
+docker pull nolanhzy/ark:latest
+3 执行命令
+yum install wget unzip -y
+4创建一个目录放配置
+cd /ark
+mkdir -p Config && cd Config
+5创建config.json 配置文件 并且修改自己的配置
+6回到ark目录创建chromium文件夹并进入
+cd /ark
+mkdir -p  .local-chromium/Linux-884014 && cd .local-chromium/Linux-884014
+7下载 chromium
+wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip && unzip chrome-linux.zip
+8删除刚刚下载的压缩包
+rm -f chrome-linux.zip
+9回到刚刚创建的目录
+cd /ark
+10启动镜像
+docker run -d \
+--name ark \
+-p 5701:80 \
+-p 5000:5000 \
+-v "$(pwd)":/app/Ark \
+-v /etc/localtime:/etc/localtime:ro \
+-it --privileged=true \
+--restart always \
+nolanhzy/ark:latest
+11查看 日志
+docker logs -f ark
+出现  started 即可
+12更新
+cd /ark
+docker stop ark
+git pull
+docker start ark
+
+阿东安装：
+cd /
+一键安装：bash <(curl -s -L https://raw.githubusercontent.com/rubyangxg/jd-qinglong/master/install.sh)
+更新：docker exec -it webapp guide
+
+傻妞安装：
+cd /etc
+s=sillyGirl;a=arm64;if [[ $(uname -a | grep "x86_64") != "" ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://github.com/cdle/${s}/releases/download/main/${s}_linux_$a -O $s && chmod 777 $s;pkill -9 $s;$(pwd)/$s
+
+set jd_cookie enable_jd_cookie true
+set qq masters 327911695&1274606012
+set qinglong client_id ?
+set qinglong client_secret ?
+set qinglong host http://192.168.50.2:5700
+set qq notifier 1041921076&
+set pinQQ jd_5953aa9fef7de 327911695
+set pinWX jd_5953aa9fef7de wagrr123
+set pinWX jd_VsyMfVzfGgst wanghaoliangtiancai
+set pinWX jd_LFyXxPraedQR wxid_6rjrmuj5uosk22
+set pinWX wagrr123 wagrr123
+set pinWX jd_4641edd9cd618 wxid_y8qqfrek4xwl21
+set pinWX jd_53c54e416da91 xyp351241
+set pinWX jd_778bf2307c7aa heyan2426
+set wx api_url http://192.168.50.3:5703
+set wx masters wagrr123
+set jd_cookie nolan_addr http://192.168.50.2:5701
+set jd_cookie nolan_first 请输入11位手机号：（输入“q”随时退出会话。）
+set jd_cookie asset_push 0 20 * * *
+傻妞后台：
+./sillyGirl后给机器人发重启
+傻妞杀后台：
+ps -A|grep sillyGirl ##显示进程号
+kill -9 xxxxxx
+后台被杀：sys
+傻妞命令：命令 重启 卸载 升级 查询 登录 任务通知 账号管理
+
+node安装
+cd /usr/local
+mkdir nodejs && cd nodejs && wget https://nodejs.org/dist/v16.13.1/node-v16.13.1-linux-x64.tar.xz
+xz -d node-v16.13.1-linux-x64.tar.xz
+tar -xvf node-v16.13.1-linux-x64.tar
+vi /etc/profile
+export NODEJS_HOME=/url/local/nodejs/node-v16.13.1-linux-x64
+export PATH=$PATH:$NODEJS_HOME/bin
+source /etc/profile
+node -v
+pm2安装
+npm -g install pm2
+qq机器人
+1.克隆仓库
+git clone https://github.com/takayama-lily/node-onebot.git
+2.进入仓库
+cd node-onebot
+3.创建配置文件 vi config.js
+module.exports = {
+    //通用配置
+    general: {
+        platform:           3,     
+        log_level:          "info",  //trace,debug,info,warn,error,mark
+        use_cqhttp_notice:  false,   //是否使用cqhttp标准的notice事件格式
+
+        host:               "0.0.0.0",  //监听主机名
+        port:               5703,       //端口
+        use_http:           false,      //启用http
+        use_ws:             false,      //启用正向ws，和http使用相同地址和端口
+        access_token:       "",         //访问api的token
+        secret:             "",         //上报数据的sha1签名密钥
+        post_timeout:       30,         //post超时时间(秒)
+        post_message_format:"array",    //"string"或"array"
+        enable_cors:        false,      //是否允许跨域请求
+        enable_heartbeat:   false,      //是否启用ws心跳
+        heartbeat_interval: 15000,      //ws心跳间隔(毫秒)
+        rate_limit_interval:500,        //使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)
+        event_filter:       "",         //json格式的事件过滤器文件路径
+        post_url: [ //上报地址，可以添加多个url
+            // "http://your.address.com:80",
+        ],
+        ws_reverse_url: [ //反向ws地址，可以添加多个url
+            "ws://127.0.0.1:5702/qq/receive",
+        ],
+        ws_reverse_reconnect_interval: 3000, //反向ws断线重连间隔(毫秒)，设为负数直接不重连
+        ws_reverse_reconnect_on_code_1000: true, //反向ws是否在关闭状态码为1000的时候重连
+    },
+
+    //每个账号的单独配置(用于覆盖通用配置)
+    147258369: {
+
+    },
+};
+
+5.登录，根据提示操作
+node main 你的qq账号
+后台运行pm2 start "node main 1274606012"
+oicq挂机：
+6.创建系统服务文件 vi /etc/systemd/system/oicq.service
+[Unit]
+Description=qq bot
+After=network.target mysql.service mariadb.service mysqld.service
+[Service]
+Type=common
+ExecStart=/usr/local/bin/node /node-onebot/main.js 你的qq账号
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+Alias=oicq.service
+7.启用服务
+systemctl enable oicq
+8.运行服务
+systemctl start oicq
+9.查看服务状态
+systemctl status oicq
+
+
+京东帐号
+我：15968781932
+妈妈：18968818082
+亮亮：18958753098
+斌：15990738126
+小姨：13857711101
+贺：13220911395
+
+centos安装后
+yum -y update
+安装docker
+yum -y install yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo http://download.docker.com/linux/centos/docker-ce.repo
+yum -y install docker-ce
+systemctl start docker
+systemctl enable docker
+systemctl status docker
+
+python3.8
+yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel gcc
+cd /usr/local
+wget http://npm.taobao.org/mirrors/python/3.8.0/Python-3.8.0.tgz
+tar -xzf Python-3.8.0.tgz
+mkdir python3
+cd Python-3.8.0
+./configure --prefix=/usr/local/python3
+make
+make install
+mv /usr/bin/python /usr/bin/python2_old
+mv /usr/bin/pip /usr/bin/pip2_old
+ln -s /usr/local/python3/bin/python3 /usr/bin/python
+ln -s /usr/local/python3/bin/pip3 /usr/bin/pip
+vi /usr/bin/yum 第一行python2.7
+vi /usr/libexec/urlgrabber-ext-down 第一行python2.7
+
+时间同步：
+yum -y install ntp ntpdate
+crontab -e
+50 23 * * * /usr/sbin/ntpdate ntp.aliyun.com
+
+1、开放端口
+firewall-cmd --zone=public --add-port=5702/tcp --permanent   # 开放傻妞端口
+firewall-cmd --zone=public --add-port=5704/tcp --permanent   # 开放阿东端口
+firewall-cmd --zone=public --add-port=5705/tcp --permanent   # 开放阿东机器人端口
+firewall-cmd --zone=public --remove-port=5702/tcp --permanent  #关闭5702端口
+firewall-cmd --reload   # 配置立即生效
+2、查看防火墙所有开放的端口
+firewall-cmd --zone=public --list-ports
+3.、关闭防火墙
+如果要开放的端口太多，嫌麻烦，可以关闭防火墙，安全性自行评估
+systemctl stop firewalld.service
+4、查看防火墙状态
+firewall-cmd --state
+
+esxi升级
+进入关闭虚拟机，进入维护模式
+esxcli software vib update -d /vmfs/volumes/datastore1/ESXi670-202111001.zip
