@@ -382,3 +382,8 @@ firewall-cmd --state
 esxi升级
 进入关闭虚拟机，进入维护模式
 esxcli software vib update -d /vmfs/volumes/datastore1/ESXi670-202111001.zip
+
+git init
+git add .
+git commit -m ""
+git push -u origin master
