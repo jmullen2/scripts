@@ -1,0 +1,7 @@
+我的tg：
+App api_id:7735714
+App api_hash:2d59068aede19a05e01360cc1b86c4c7
+tg机器人：
+Your user ID: 1648074905
+Current chat ID: 1648074905
+tg token：1887472615:AAGQy7EbBTa7N9xFpju7uyqujhuWX0pDFHM

@@ -1,0 +1,26 @@
+192.168.1.1  ÒÆ¶¯¹âÃ¨ ÕÊºÅ£ºCMCCAdmin ÃÜÂë£ºaDm8H%MdA
+192.168.1.2  OpenWrt ÕÊºÅ£ºroot ÃÜÂë£ºpassword
+192.168.50.1 OpenWrt ÕÊºÅ£ºroot ÃÜÂë£ºpassword
+192.168.50.2 CentOS ÕÊºÅ£ºroot ÃÜÂë£ºpassword
+192.168.50.2:5700 qinglong ÕÊºÅ£ºroot ÃÜÂë£ºpassword
+192.168.50.2:5701 ark
+192.168.50.2:5702 Éµæ¤
+192.168.50.2:5702/admin Éµæ¤Êı¾İ ÕÊºÅ£ºadmin ÃÜÂë£ºpassword
+192.168.50.2:5703 QQ
+192.168.50.2:5704 °¢¶«
+192.168.50.2:5705 °¢¶«»úÆ÷ÈË ÕÊºÅ£ºadmin ÃÜÂë£ºpassword
+192.168.50.3 win7 ÕÊºÅ£ºAdministrator ÃÜÂë£ºpassword
+192.168.50.3:5703 vlw
+192.168.50.5 esxi ÕÊºÅ£ºroot ÃÜÂë£ºÎŞ
+
+AX6sshÃÜÂë£º14da47d1
+AX6sshÈ¨ÏŞ¶ªÊ§µÄ»°
+telnet 192.168.1.1
+sed -i 's/channel=.*/channel="debug"/g' /etc/init.d/dropbear
+/etc/init.d/dropbear start
+exit
+
+»ú³¡£º
+°×ÔÂ¹â£ºhttps://nhdufi497g.cn88.net/api/v1/client/subscribe?token=854e953355bc0ade1f0cdf5c48bb76ba
+nano£ºhttps://subv2.nanoport.xyz/api/v1/client/subscribe?token=7be6b5e73cce47c6e74117d22d65197b
+ÉñÆ÷£ºhttps://v2r.yydsvpn.xyz/api/v1/client/subscribe?token=653f3aa43aa0b4bbd36a0e23d47fa687
